@@ -1,0 +1,42 @@
+.profile_card {
+  width: 350px;
+  padding: 20px;
+  background-color: #86bbef;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Центрируем текст */
+  font-family: sans-serif;
+  transition: transform 0.3s ease;
+}
+
+/* Эффект при наведении */
+.profile_card:hover {
+  transform: translateY(-5px);
+}
+
+/* если стилизовать по тэгу, то применится ко всему сайту */
+
+
+/* Сама аватарка */
+.img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Делаем картинку круглой */
+  object-fit: cover;  /* Чтобы фото не растягивалось */
+  border: 3px solid #646cff; /* Декоративная рамка */
+}
+
+/* Стили текста */
+.name {
+  margin: 10px 0 5px;
+  font-size: 3.2rem;
+  color: #371ce3;
+}
+
+.description {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #0f0720;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
