@@ -14,12 +14,12 @@ function App() {
       {/* <Greetings name="Alisher" />
       <Greetings name="Vadim" /> */}
       <Tool />
-      <Greetings name="Khamidov" />
+      <Greetings name="User" />
       <Counter />
       <Counter />
-      <Goodbye familyName="Khamidov" score={90} />
+      <Goodbye familyName="User" score={90} />
       {/* score опционально может быть или нет */}
-      <Goodbye familyName="Khamidov" /> 
+      <Goodbye familyName="User" /> 
 
       <ProfileCard avatar="https://cs2.livemaster.ru/storage/7c/77/ef99ee5859a22fc21bfbddafbah8--kukly-i-igrushki-koshechka-puteshestvennitsa.jpg
       " name="Ket" description="Кошечка-путешественница" />
