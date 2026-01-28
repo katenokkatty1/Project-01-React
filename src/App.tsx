@@ -4,6 +4,7 @@ import Goodbye from "./components/Goodbye/Goodbye";
 import Greetings from "./components/Greatings/Greatings";
 import IdealWeightCalculator from "./components/IdealWeightCalculator/IdealWeightCalculator";
 import ProfileCard from "./components/ProfileCard/ProfileCard";
+import SpaceMissionForm from "./components/SpaceMissionForm/SpaceMissionForm";
 import Tool from "./components/Tool/Tool";
 
 
@@ -24,7 +25,11 @@ function App() {
 
       <ProfileCard avatar="https://cs2.livemaster.ru/storage/7c/77/ef99ee5859a22fc21bfbddafbah8--kukly-i-igrushki-koshechka-puteshestvennitsa.jpg
       " name="Ket" description="Кошечка-путешественница" />
-   <IdealWeightCalculator />
+      <IdealWeightCalculator />
+      <SpaceMissionForm />
+
+
+
     </>
   );
 }
