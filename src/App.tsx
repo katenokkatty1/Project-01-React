@@ -4,6 +4,7 @@ import GenderReveal from "./components/GenderReveal/GenderReveal";
 import Goodbye from "./components/Goodbye/Goodbye";
 import Greetings from "./components/Greatings/Greatings";
 import IdealWeightCalculator from "./components/IdealWeightCalculator/IdealWeightCalculator";
+import NationalReveal from "./components/NationalReveal/NationalReveal";
 import ProfileCard from "./components/ProfileCard/ProfileCard";
 import RandomDog from "./components/RandomDog/RandomDog";
 import SpaceMissionForm from "./components/SpaceMissionForm/SpaceMissionForm";
@@ -31,7 +32,7 @@ function App() {
       <SpaceMissionForm />
       <RandomDog />
 <GenderReveal />
-
+<NationalReveal />
     </>
   );
 }
