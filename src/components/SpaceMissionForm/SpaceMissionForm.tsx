@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useEffect, useState } from "react";
 import style from "./SpaceMissionForm.module.css";
 import { planetOptions } from "./selectOptions";
 
@@ -7,7 +7,18 @@ export default function SpaceMissionForm() {
   const [planet, setPlanet] = useState("mars");
   const [message, setMessage] = useState("");
      
-//   const [idealWeight, setIdealWeight] = useState(0);
+// useEffect без массива зависимостей
+  // при mount и при любых изменениях - update
+  useEffect(() => {
+    console.log("Use effect in Space Mission - no dependencies");
+  });
+
+  // useEffect с зависимостями
+  // при mount 
+  // или когда меняется указанная в массиве переменная - name
+  useEffect(() => {
+    console.log("Use effect in Space Mission - with dependecie on name");
+  }, [name]);
 
 
   function handleSpaceMissionForm() {
