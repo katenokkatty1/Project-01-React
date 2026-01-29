@@ -22,7 +22,7 @@ export default function RandomDog() {
 
   return (
     <div>
-      <h2>Random Dog</h2>
+      {/* <h2>Random Dog</h2> */}
       <img src={image} alt="dog" />
     </div>
   );

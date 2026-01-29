@@ -1,50 +1,71 @@
-import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Counter from "./components/Counter/Counter";
 import GenderReveal from "./components/GenderReveal/GenderReveal";
-import Goodbye from "./components/Goodbye/Goodbye";
-import Greetings from "./components/Greatings/Greatings";
 import IdealWeightCalculator from "./components/IdealWeightCalculator/IdealWeightCalculator";
 import NationalReveal from "./components/NationalReveal/NationalReveal";
 import ProfileCard from "./components/ProfileCard/ProfileCard";
 import RandomDog from "./components/RandomDog/RandomDog";
 import SpaceMissionForm from "./components/SpaceMissionForm/SpaceMissionForm";
-import Tool from "./components/Tool/Tool";
-
+import Home from "./pages/Home/Home";
+import NotFound from "./pages/NotFound/NotFound";
+import Layout from "./layouts/layout";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
+import ProfileLayout from "./layouts/ProfileLayout";
+import ProfileData from "./pages/ProfileData/ProfileData";
+import Profile from "./pages/Profile/Profile";
+import Settings from "./pages/Settings/Settings";
+import ProductPage from "./pages/ProductPage/ProductsPage";
+import ProductList from "./components/ProductList/ProductList";
+import CarPage from "./pages/CarPage/CarPage";
 
 function App() {
   return (
     <>
-      <p className="heading">Hello, World!</p>
-      {/* props */}
-      {/* <Greetings name="Alisher" />
-      <Greetings name="Vadim" /> */}
-      <Tool />
-      <Greetings name="User" />
-      <Counter />
-      <Counter />
-      <Goodbye familyName="User" score={90} />
-      {/* score опционально может быть или нет */}
-      <Goodbye familyName="User" /> 
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            {" "}
+            // Общий лэйаут (макет)для всех страниц
+            <Route path="/" element={<Home />} />
+            {/* или  <Route index element={<Home />} /> - index означает домашнюю страничку*/}
+            <Route path="/gender-reveal" element={<GenderReveal />} />
+            <Route path="/counter" element={<Counter />} />
+            <Route
+              path="/ideal-weight-calculator"
+              element={<IdealWeightCalculator />}
+            />
+            <Route path="/space-mission-form" element={<SpaceMissionForm />} />
+            <Route path="/random-dog" element={<RandomDog />} />
+            <Route path="/national-reveal" element={<NationalReveal />} />
+            <Route
+              path="/profile-card"
+              element={
+                <ProfileCard
+                  avatar="https://cs2.livemaster.ru/storage/7c/77/ef99ee5859a22fc21bfbddafbah8--kukly-i-igrushki-koshechka-puteshestvennitsa.jpg
+            "
+                  name="Ket"
+                  description="Кошечка-путешественница"
+                />
+              }
+            />
+            <Route path="/about" element={<About />} />
+            <Route path="/profile" element={<ProfileLayout />}>
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/profile/data" element={<ProfileData />} />
+              <Route path="/profile/settings" element={<Settings />} />
+            </Route>
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/products/:id" element={<ProductPage />}></Route>
+            <Route path="/products/" element={<ProductList />}></Route>
+            <Route path="/cars/:model" element={<CarPage />}></Route>
+          </Route>
 
-      <ProfileCard avatar="https://cs2.livemaster.ru/storage/7c/77/ef99ee5859a22fc21bfbddafbah8--kukly-i-igrushki-koshechka-puteshestvennitsa.jpg
-      " name="Ket" description="Кошечка-путешественница" />
-      <IdealWeightCalculator />
-      <SpaceMissionForm />
-      <RandomDog />
-<GenderReveal />
-<NationalReveal />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
-  
+
 export default App;
-
-// Задание
-// Создайте компонент Goodbye
-// компонент должен возвращать параграф с текстом Goodbye, <family_name>
-
-// соответственно у компонента должен быть пропс familyName
-// Создайте два элемента с разными фамилиями
-
-// дополнительно добавьте score - числовой пропс
-// Goodbye, John, your score is 97
