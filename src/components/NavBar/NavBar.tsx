@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import s from "./NavBar.module.css";
 import clsx from "clsx";
+import { ROUTES as R } from "../../share/routes";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   clsx(s.link, isActive && s.active);
@@ -8,16 +9,17 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
 export default function NavBar() {
   return (
     <nav className={s.container}>
-      <NavLink to={"/"} className={navLinkClass}>Home</NavLink>
-        <NavLink to={"/products"} className={navLinkClass}>Products</NavLink>
-      <NavLink to={"/counter"} className={navLinkClass}>Counter</NavLink>
-      <NavLink to={"/gender-reveal"} className={navLinkClass}>Gender Reveal</NavLink>
-      <NavLink to={"/national-reveal"} className={navLinkClass}>Nationalize</NavLink>
-      <NavLink to={"/space-mission-form"} className={navLinkClass}>Space Mission</NavLink>
-      <NavLink to={"/ideal-weight-calculator"} className={navLinkClass}>Ideal Weight Calculator</NavLink>
-      <NavLink to={"/about"} className={navLinkClass}>About</NavLink>
-      <NavLink to={"/profile"} className={navLinkClass}>Profile</NavLink>
-      <NavLink to={"/contact"} className={navLinkClass}>Contact</NavLink>
+      <NavLink to={R.HOME} className={navLinkClass}>Home</NavLink>
+        <NavLink to={R.PRODUCTS} className={navLinkClass}>Products</NavLink>
+        <NavLink to={R.USERS} className={navLinkClass}>Users</NavLink>
+      <NavLink to={R.COUNTER} className={navLinkClass}>Counter</NavLink>
+      <NavLink to={R.GENDER_REVEAL} className={navLinkClass}>Gender Reveal</NavLink>
+      <NavLink to={R.NATIONAL_REVEAL} className={navLinkClass}>Nationalize</NavLink>
+      <NavLink to={R.SPACE_MISSION} className={navLinkClass}>Space Mission</NavLink>
+      <NavLink to={R.IDEAL_WEIGHT} className={navLinkClass}>Ideal Weight Calculator</NavLink>
+      <NavLink to={R.ABOUT} className={navLinkClass}>About</NavLink>
+      <NavLink to={R.PROFILE} className={navLinkClass}>Profile</NavLink>
+      <NavLink to={R.CONTACTS} className={navLinkClass}>Contact</NavLink>
    
     </nav>
   );

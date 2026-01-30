@@ -1,0 +1,21 @@
+export const ROUTES = {
+  HOME: "/",
+  GENDER_REVEAL: "/gender-reveal",
+   COUNTER: "/counter",
+   IDEAL_WEIGHT: "/ideal-weight-calculator",
+  SPACE_MISSION: "/space-mission-form", 
+   RANDOM_DOG: "/random-dog",
+   NATIONAL_REVEAL: "/national-reveal",
+    PROFILE_CARD: "/profile-card",
+   ABOUT: "/about",
+PROFILE: "/profile",
+  PROFILE_DATA: "/profile/data",
+  PROFILE_SETTINGS: "/profile/settings",
+    CONTACTS: "/contact",
+   NOT_FOUND: "*",
+   PRODUCTS: "/productList",
+  PRODUCT: (id: string | number) => `/products/${id}`,
+   CAR: (model: string | number) => `/cars/${model}`,
+  USERS: "/users",
+  USER: (id: string | number) => `/users/${id}`
+} as const;
