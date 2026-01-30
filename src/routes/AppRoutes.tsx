@@ -21,6 +21,8 @@ import ProductPage from "../pages/ProductPage/ProductsPage";
 import { ROUTES as R } from "../share/routes";
 import ProductList from "../components/ProductList/ProductList";
 import UserPage from "../pages/UserPage/UserPage";
+import Signup from "../pages/Signup/Signup";
+import Signin from "../pages/Signin/Signin";
 
 export default function AppRoutes() {
   return (
@@ -64,6 +66,9 @@ export default function AppRoutes() {
         <Route path={R.USER(":id")} element={<UserPage />}></Route>
         <Route path={R.CAR(":model")} element={<CarPage />}></Route>
         <Route path={R.USERS} element={<UsersPage />}></Route>
+        <Route path={R.SIGNUP} element={<Signup />}></Route>
+        <Route path={R.SIGNIN} element={<Signin />}></Route>
+
       </Route>
     </Routes>
   );

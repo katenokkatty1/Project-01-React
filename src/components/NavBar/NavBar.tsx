@@ -20,6 +20,8 @@ export default function NavBar() {
       <NavLink to={R.ABOUT} className={navLinkClass}>About</NavLink>
       <NavLink to={R.PROFILE} className={navLinkClass}>Profile</NavLink>
       <NavLink to={R.CONTACTS} className={navLinkClass}>Contact</NavLink>
+      <NavLink to={R.SIGNUP} className={navLinkClass}>Sign Up</NavLink>
+      <NavLink to={R.SIGNIN} className={navLinkClass}>Sign In</NavLink>
    
     </nav>
   );

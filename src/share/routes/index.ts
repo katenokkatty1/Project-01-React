@@ -17,5 +17,9 @@ PROFILE: "/profile",
   PRODUCT: (id: string | number) => `/products/${id}`,
    CAR: (model: string | number) => `/cars/${model}`,
   USERS: "/users",
-  USER: (id: string | number) => `/users/${id}`
+  USER: (id: string | number) => `/users/${id}`,
+SIGNUP: "/signup",
+SIGNIN: "/signin",
+
+
 } as const;
